@@ -77,9 +77,9 @@ body {
 
 /* Typing effect cursor */
 .blinking-cursor::after {
-    
+    content: '|';
     animation: blink 1s steps(2) infinite;
-    color: #4a90e2; /* Customize cursor color to match your design */
+    color: #4a90e2;
 }
 
 @keyframes blink {
