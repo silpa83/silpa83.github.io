@@ -9,6 +9,7 @@ document.getElementById('menu-icon').addEventListener('click', function() {
     }
 });
 
+
 // Typing effect for "Front-end Developer" text
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.getElementById("typing-text");
