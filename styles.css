@@ -1,3 +1,4 @@
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,7 @@ body {
     background: linear-gradient(to bottom right, #e0f7ff, #b2ebf2);
 }
 
+/* Navbar Styles */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -30,6 +32,7 @@ body {
     cursor: pointer;
 }
 
+/* Dropdown Menu */
 #dropdown-menu {
     display: none;
     position: absolute;
@@ -54,6 +57,7 @@ body {
     color: white;
 }
 
+/* Intro Section */
 .intro {
     text-align: center;
     padding: 50px 20px;
@@ -79,6 +83,7 @@ body {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
 }
+
 .intro p {
     font-size: 1.2em;
     color: #555;
@@ -86,6 +91,7 @@ body {
     margin: 20px auto;
 }
 
+/* Social Icons */
 .social-icons {
     display: flex;
     justify-content: center;
@@ -103,8 +109,7 @@ body {
     transform: scale(1.1); /* Adds a slight zoom effect on hover */
 }
 
-
-
+/* Resume Button */
 .resume-button {
     padding: 10px 20px;
     font-size: 1.2em;
