@@ -116,6 +116,7 @@ body.dark-mode .intro h2 {
     color: #f5f5f5;
 }
 
+/* Set a fixed width and center alignment for the typing text */
 .intro h3 {
     font-size: 2.2em;
     color: #4a90e2;
@@ -123,7 +124,11 @@ body.dark-mode .intro h2 {
     height: 1.5em;
     line-height: 1.5em;
     overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
+
 
 /* Blinking Cursor */
 .blinking-text::after {
