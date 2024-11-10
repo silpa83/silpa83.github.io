@@ -9,3 +9,22 @@ document.getElementById('menu-icon').addEventListener('click', function() {
     }
 });
 
+// Typing effect for "Front-end Developer" text
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.getElementById("typing-text");
+    const text = "Front-end Developer";
+    let index = 0;
+
+    function typeLetterByLetter() {
+        if (index < text.length) {
+            textElement.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeLetterByLetter, 100); // Adjust typing speed here (100ms)
+        } else {
+            textElement.classList.add("blinking-cursor");
+        }
+    }
+
+    textElement.textContent = ""; // Clear initial text
+    typeLetterByLetter();
+});
