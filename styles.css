@@ -74,6 +74,12 @@ body {
     color: #4a90e2;
     margin: 10px 0;
 }
+.blinking-text {
+    display: inline-block;      /* Ensures it behaves as a block with fixed height */
+    height: 1.5em;              /* Set a fixed height based on your font size */
+    line-height: 1.5em;         /* Vertically centers the text */
+    overflow: hidden;           /* Prevents text overflow */
+}
 
 /* Typing effect cursor */
 .blinking-cursor::after {
