@@ -75,13 +75,16 @@ body {
     margin: 10px 0;
 }
 
-.blinking-text {
-    animation: fadeInOut 2s infinite;
+/* Typing effect cursor */
+.blinking-cursor::after {
+    content: '|';
+    animation: blink 1s steps(2) infinite;
+    color: #4a90e2; /* Customize cursor color to match your design */
 }
 
-@keyframes fadeInOut {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .intro p {
