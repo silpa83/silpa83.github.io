@@ -42,4 +42,18 @@ document.addEventListener("DOMContentLoaded", function() {
     typeTitle();
 });
 
+// Toggle light/dark mode
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    // Toggle icon between sun and moon
+    if (document.body.classList.contains('dark-mode')) {
+        themeToggle.textContent = '🌙'; // Moon icon for dark mode
+    } else {
+        themeToggle.textContent = '🌞'; // Sun icon for light mode
+    }
+});
+
+
 
