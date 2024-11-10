@@ -77,16 +77,23 @@ body {
     margin: 20px auto;
 }
 
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    margin: 0 10px;
-    transition: transform 0.2s;
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
 }
 
-.social-icons img:hover {
-    transform: scale(1.1);
+.social-icons i {
+    font-size: 2em; /* Adjust size as needed */
+    color: #333;
+    transition: color 0.3s;
 }
+
+.social-icons i:hover {
+    color: #0073b1; /* Change color on hover */
+}
+
 
 .resume-button {
     padding: 10px 20px;
