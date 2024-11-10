@@ -64,12 +64,21 @@ body {
     color: #333;
 }
 
+/* Blinking Effect for Front-end Developer */
 .intro h3 {
     font-size: 2em;
     color: #4a90e2;
     margin: 10px 0;
 }
 
+.blinking-text {
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
 .intro p {
     font-size: 1.2em;
     color: #555;
