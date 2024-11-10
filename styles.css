@@ -77,16 +77,16 @@ body {
 /* Fixed height for blinking text to prevent layout shifts */
 .blinking-text {
     display: inline-block;
-    height: 1.5em;              /* Adjust this as needed */
+    height: 1.5em;              /* Adjust this height if needed */
     line-height: 1.5em;
     overflow: hidden;
 }
 
-/* Typing effect cursor */
-.blinking-cursor::after {
+.blinking-text::after {
     content: '|';
     animation: blink 1s steps(2) infinite;
-    color: #4a90e2;
+    color: #4a90e2;             /* Color of the cursor */
+    margin-left: 2px;           /* Adds a small space between text and cursor */
 }
 
 @keyframes blink {
