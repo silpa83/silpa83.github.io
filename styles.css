@@ -49,6 +49,9 @@ body.dark-mode .navbar {
     margin: 0; /* Removes any default margin */
     gap: 20px;
 }
+.nav-links li {
+    display: inline; /* Ensures links display inline */
+}
 
 .nav-links a {
     text-decoration: none;
