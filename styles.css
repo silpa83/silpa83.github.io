@@ -49,7 +49,7 @@ body.dark-mode .navbar {
     list-style: none; /* Removes bullet points */
     padding: 0; /* Removes any default padding */
     margin: 0; /* Removes any default margin */
-    gap: 50px; /* Adjust this value to change the spacing between items */
+    gap: 30px; /* Adjust this value to change the spacing between items */
     font-weight: bold; /* Make text bold */
 }
 
