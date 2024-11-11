@@ -21,7 +21,7 @@ body.dark-mode {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
     padding: 20px;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
