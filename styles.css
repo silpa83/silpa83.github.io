@@ -61,6 +61,7 @@ body.dark-mode .navbar {
     color: #333;
     font-size: 1em;
     transition: color 0.3s;
+    font-weight: bold; 
 }
 
 body.dark-mode .nav-links a {
@@ -86,7 +87,7 @@ body.dark-mode .nav-links a {
 .theme-icon {
     font-size: 1.5em;
     cursor: pointer;
-    margin-left: 20px; /* Space between Contact and the sun icon */
+    margin-left: 10px; /* Space between Contact and the sun icon */
     transition: transform 0.2s;
 }
 
