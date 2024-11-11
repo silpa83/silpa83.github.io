@@ -44,12 +44,12 @@ body.dark-mode .navbar {
 }
 
 .nav-links {
-    display: flex;
-    list-style: none; /* Removes bullet points */
-    padding: 0; /* Removes any default padding */
-    margin: 0; /* Removes any default margin */
-    gap: 10 px;
-    font-weight: bold; /* Make text bold */
+    display: inline-flex; /* Ensures links are inline with the sun icon */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 12px; /* Reduces spacing between items */
+    font-weight: bold; /* Makes text bold */
 }
 
 .nav-links li {
@@ -61,7 +61,7 @@ body.dark-mode .navbar {
     color: #333;
     font-size: 1em;
     transition: color 0.3s;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 body.dark-mode .nav-links a {
@@ -87,8 +87,10 @@ body.dark-mode .nav-links a {
 .theme-icon {
     font-size: 1.5em;
     cursor: pointer;
-    margin-left: 10px; /* Space between Contact and the sun icon */
-    transition: transform 0.2s;
+    margin-left: 15px; /* Controls space between last link and icon */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-icon:hover {
