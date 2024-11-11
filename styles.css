@@ -102,7 +102,7 @@ body.dark-mode .nav-links a {
 
 /* Intro Section */
 .intro {
-    text-align: Center;
+    text-align: center;
     padding: 70px 20px;
 }
 
@@ -116,7 +116,6 @@ body.dark-mode .intro h2 {
     color: #f5f5f5;
 }
 
-/* Set a fixed width and center alignment for the typing text */
 .intro h3 {
     font-size: 2.2em;
     color: #4a90e2;
@@ -124,11 +123,7 @@ body.dark-mode .intro h2 {
     height: 1.5em;
     line-height: 1.5em;
     overflow: hidden;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
 }
-
 
 /* Blinking Cursor */
 .blinking-text::after {
@@ -172,7 +167,6 @@ body.dark-mode .intro p {
     transform: scale(1.1);
     filter: brightness(0.8);
 }
-
 
 /* Resume Button */
 .resume-button {
