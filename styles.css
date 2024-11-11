@@ -23,9 +23,9 @@ body.dark-mode {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20 px;
     background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4 px 8 px rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode .navbar {
@@ -34,13 +34,13 @@ body.dark-mode .navbar {
 }
 
 .theme-icon {
-    font-size: 1.5em;
+    font-size: 1.5 em;
     cursor: pointer;
 }
 
 .navbar h1 {
     font-family: 'Cursive', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5 em;
 }
 
 .nav-links {
@@ -48,7 +48,7 @@ body.dark-mode .navbar {
     list-style: none; /* Removes bullet points */
     padding: 0; /* Removes any default padding */
     margin: 0; /* Removes any default margin */
-    gap: 30 px;
+    gap: 10 px;
     font-weight: bold; /* Make text bold */
 }
 
