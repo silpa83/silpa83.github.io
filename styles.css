@@ -22,7 +22,7 @@ body.dark-mode {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -49,13 +49,13 @@ body.dark-mode .navbar {
     list-style: none; /* Removes bullet points */
     padding: 0; /* Removes any default padding */
     margin: 0; /* Removes any default margin */
-    gap: 30px; /* Adjust this value to change the spacing between items */
+    gap: 50px; /* Adjust this value to change the spacing between items */
     font-weight: bold; /* Make text bold */
 }
 
 .nav-links li {
     display: inline; /* Ensures links display inline */
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 .nav-links a {
