@@ -104,9 +104,12 @@ body.dark-mode .nav-links a {
 }
 
 /* Intro Section */
+/* Intro Section */
 .intro {
-    text-align: center;
+    text-align: left; /* Aligns text to the left */
     padding: 70px 20px;
+    max-width: 800px; /* Limits the width of the intro section */
+    margin: auto; /* Centers the section itself */
 }
 
 .intro h2 {
