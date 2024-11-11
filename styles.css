@@ -41,6 +41,7 @@ body.dark-mode .navbar {
     font-size: 1.5em;
 }
 
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -68,10 +69,11 @@ body.dark-mode .nav-links a {
     cursor: pointer;
 }
 
+/* Align sun icon to the right of nav links */
 .theme-icon {
     font-size: 1.5em;
     cursor: pointer;
-    margin-left: 20px;
+    margin-left: 20px; /* Space between Contact and the sun icon */
     transition: transform 0.2s;
 }
 
@@ -92,6 +94,19 @@ body.dark-mode .nav-links a {
         flex-direction: column;
         border-radius: 8px;
         padding: 10px 0;
+    }
+     .nav-links li {
+        padding: 10px 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .theme-icon {
+        display: none; /* Hide sun icon on small screens */
     }
 
     body.dark-mode .nav-links {
