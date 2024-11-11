@@ -55,7 +55,7 @@ body.dark-mode .navbar {
 
 .nav-links li {
     display: inline; /* Ensures links display inline */
-    margin-right: 50px;
+    margin-right: 30 px;
 }
 
 .nav-links a {
