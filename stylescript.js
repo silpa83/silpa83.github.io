@@ -36,7 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Toggle light/dark mode
-document.getElementById('theme-toggle').addEventListener('click', () => {
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+    console.log("Sun/Moon icon clicked"); // Debug log to confirm click event
     document.body.classList.toggle('dark-mode');
-    document.getElementById('theme-toggle').textContent = document.body.classList.contains('dark-mode') ? '🌙' : '🌞';
+
+    // Toggle icon between sun and moon
+    if (document.body.classList.contains('dark-mode')) {
+        themeToggle.textContent = '🌙'; // Moon icon for dark mode
+    } else {
+        themeToggle.textContent = '🌞'; // Sun icon for light mode
+    }
 });
