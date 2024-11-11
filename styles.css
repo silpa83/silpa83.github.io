@@ -44,7 +44,9 @@ body.dark-mode .navbar {
 
 .nav-links {
     display: flex;
-    list-style: none;
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes any default padding */
+    margin: 0; /* Removes any default margin */
     gap: 20px;
 }
 
