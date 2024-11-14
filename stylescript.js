@@ -48,3 +48,8 @@ themeToggle.addEventListener('click', () => {
         themeToggle.textContent = '🌞'; // Sun icon for light mode
     }
 });
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+}
+
