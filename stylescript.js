@@ -48,6 +48,18 @@ themeToggle.addEventListener('click', () => {
         themeToggle.textContent = '🌞'; // Sun icon for light mode
     }
 });
+
+// Show Section Function
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        if (section.id === sectionId) {
+            section.classList.add('active');
+        } else {
+            section.classList.remove('active');
+        }
+    });
+}
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
