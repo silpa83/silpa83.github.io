@@ -11,17 +11,43 @@
     <nav class="navbar">
         <h1>Silpa Nandipati</h1>
         <ul class="nav-links" id="nav-links">
-            <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+           <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('services')">Services</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
         </ul>
         <span class="theme-icon" id="theme-toggle">🌞</span> <!-- Only one theme icon here -->
         <span class="menu-icon" id="menu-icon">☰</span>
     </nav>
 </header>
-   
+   <!-- Content Sections -->
+    <main>
+        <section id="home" class="content-section active">
+            <h2>Welcome to My Portfolio</h2>
+            <p>This is the home section of my portfolio.</p>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>About Me</h2>
+            <p>A bit about me... I'm a developer with experience in designing and building high-performance applications.</p>
+        </section>
+
+        <section id="services" class="content-section">
+            <h2>Services</h2>
+            <p>Here are the services I offer.</p>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <p>Here are some of my notable projects.</p>
+        </section>
+
+        <section id="contact" class="content-section">
+            <h2>Contact</h2>
+            <p>Feel free to contact me!</p>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
