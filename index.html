@@ -1,49 +1,220 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-    <nav class="navbar">
-        <h1>Silpa Nandipati</h1>
-        <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <span class="theme-icon" id="theme-toggle">🌞</span> <!-- Only one theme icon here -->
-        <span class="menu-icon" id="menu-icon">☰</span>
-    </nav>
-</header>
-    
-   <main>
-        <section class="intro">
-            <h2>Hi, I am Silpa</h2>
-            <h3 id="typing-text" class="blinking-text"></h3>
-            <p>I am a Front-End / Full-Stack Developer. I am currently working at CloudStok Technologies as a Front-End Developer.</p>
-            <div class="social-icons">
-                <a href="https://stackoverflow.com/" target="_blank">
-                    <img src="https://cdn.simpleicons.org/stackoverflow/f48024" alt="Stack Overflow" />
-                </a>
-                <a href="https://instagram.com/" target="_blank">
-                    <img src="https://cdn.simpleicons.org/instagram/e1306c" alt="Instagram" />
-                </a>
-                <a href="https://github.com/" target="_blank">
-                    <img src="https://cdn.simpleicons.org/github/333333" alt="GitHub" />
-                </a>
-                <a href="https://linkedin.com/" target="_blank">
-                    <img src="https://cdn.simpleicons.org/linkedin/0077b5" alt="LinkedIn" />
-                </a>
-            </div>
-            <button class="resume-button">Resume</button>
-        </section>
-    </main>
-    <script src="stylescript.js"></script>
-</body>
-</html>
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #e0f7ff, #b2ebf2);
+    color: #333;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Mode Theme */
+body.dark-mode {
+    background: linear-gradient(to bottom right, #1a1a1a, #333333);
+    color: #f5f5f5;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+body.dark-mode .navbar {
+    background: #333;
+    color: #f5f5f5;
+}
+
+.theme-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.navbar h1 {
+    font-family: 'Cursive', sans-serif;
+    font-size: 1.5em;
+    margin: 0; /* Removes extra margin around header */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes any default padding */
+    margin: 0; /* Removes any default margin */
+    gap: 30px; /* Adjust this value to change the spacing between items */
+    font-weight: bold; /* Make text bold */
+    font-size: 1.2em; /* Adjust font size as desired */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+body.dark-mode .nav-links a {
+    color: #f5f5f5;
+}
+
+.nav-links a:hover {
+    color: #4a90e2;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Align sun icon to the right of nav links */
+.theme-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        border-radius: 8px;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        padding: 10px 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .theme-icon {
+        display: none; /* Hide sun icon on small screens */
+    }
+
+    body.dark-mode .nav-links {
+        background: #333;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Intro Section */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    padding: 70px 50px; /* Adjusts padding for better spacing */
+    text-align: left; /* Ensures all text aligns to the left */
+}
+
+.intro h2 {
+    font-size: 3em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px; /* Spacing between main heading and subheading */
+}
+
+.intro h3 {
+    font-size: 2.2em;
+    color: #4a90e2;
+    margin: 10px 0; /* Adjusts spacing around the blinking text */
+    display: inline-block;
+    line-height: 1.5em;
+}
+
+/* Blinking Effect for "Front-end Developer" text */
+.blinking-text::after {
+    content: '|';
+    animation: blink 1s steps(2) infinite;
+    color: #4a90e2;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.intro p {
+    font-size: 1.2em;
+    color: #555;
+    max-width: 600px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+body.dark-mode .intro p {
+    color: #cccccc;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+/* Resume Button */
+.resume-button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.resume-button:hover {
+    background-color: #357ab7;
+}
+
+body.dark-mode .resume-button {
+    background-color: #357ab7;
+}
