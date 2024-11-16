@@ -72,7 +72,21 @@ body.dark-mode .nav-links a {
 .nav-links a:hover {
     color: #4a90e2;
 }
+/* Section Styles */
+.content-section {
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
 
+.content-section.active {
+    display: block;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
 .menu-icon {
     display: none;
     font-size: 1.5em;
