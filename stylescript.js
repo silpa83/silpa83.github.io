@@ -1,11 +1,19 @@
-// Toggle the dropdown menu on and off
-document.getElementById('menu-icon').addEventListener('click', function() {
+// Mobile Menu Toggle
+document.getElementById('menu-icon').addEventListener('click', function () {
     const navLinks = document.getElementById('nav-links');
     navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 });
 
-// Typing effect for "Front-end Developer" text
-document.addEventListener("DOMContentLoaded", function() {
+// Auto-close Mobile Menu on Link Click
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.style.display = 'none';
+    });
+});
+
+// Typing Effect for Titles
+document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typing-text");
     const titles = ["Front-end Developer", "Full-Stack Developer", "DevOps Architect"];
     let titleIndex = 0;
@@ -15,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (charIndex < titles[titleIndex].length) {
             textElement.textContent += titles[titleIndex].charAt(charIndex);
             charIndex++;
-            setTimeout(typeTitle, 100); // Adjust typing speed here
+            setTimeout(typeTitle, 100);
         } else {
-            setTimeout(deleteTitle, 2000); // Wait before deleting (2 seconds here)
+            setTimeout(deleteTitle, 2000);
         }
     }
 
@@ -25,43 +33,42 @@ document.addEventListener("DOMContentLoaded", function() {
         if (charIndex > 0) {
             textElement.textContent = titles[titleIndex].substring(0, charIndex - 1);
             charIndex--;
-            setTimeout(deleteTitle, 50); // Adjust delete speed here
+            setTimeout(deleteTitle, 50);
         } else {
-            titleIndex = (titleIndex + 1) % titles.length; // Move to the next title
-            setTimeout(typeTitle, 500); // Start typing the next title after a brief pause
+            titleIndex = (titleIndex + 1) % titles.length;
+            setTimeout(typeTitle, 500);
         }
     }
 
-    // Start the typing effect
     typeTitle();
 });
 
-// Toggle light/dark mode
+// Light/Dark Mode Toggle
 const themeToggle = document.getElementById('theme-toggle');
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    
-    // Toggle icon between sun and moon
-    if (document.body.classList.contains('dark-mode')) {
-        themeToggle.textContent = '🌙'; // Moon icon for dark mode
-    } else {
-        themeToggle.textContent = '🌞'; // Sun icon for light mode
-    }
+    themeToggle.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '🌞';
 });
 
-// Show Section Function
+// Section Display and Smooth Scrolling
+function navigateToSection(sectionId) {
+    showSection(sectionId);
+    scrollToSection(sectionId);
+}
+
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.content-section');
     sections.forEach(section => {
-        if (section.id === sectionId) {
-            section.classList.add('active');
-        } else {
-            section.classList.remove('active');
-        }
+        section.classList.toggle('active', section.id === sectionId);
     });
 }
+
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
 }
 
+// Set Initial Section on Page Load
+window.onload = () => {
+    showSection('home');
+};
